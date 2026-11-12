@@ -1,3 +1,4 @@
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -42,5 +43,11 @@ public class test {
         assertThrows(IllegalArgumentException.class, () -> {
             code.celsiusToKelvin(-274);
         });
+    }
+
+    // INTENTIONALLY FAILING TEST CASE
+    @Test
+    void testIntentionalFailure() {
+        assertEquals(100.0, code.celsiusToFahrenheit(0), 0.001);
     }
 }
